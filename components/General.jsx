@@ -1,54 +1,63 @@
-import { useState } from 'react'
 import '../styles/General.css'
 
-export default function General() {
-  const [firstName, setFirstName] = useState(' ');
-  const [lastName, setLastName] = useState(' ');
-  const [email, setEmail] = useState(' ');
-  const [telephone, setTelephone] = useState(' ');
+export default function General({ data, onChange }) {
+  function handleOnChange(e) {
+    const key = e.target.name;
+    const value = e.target.value;
+
+    onChange(key, value);
+  }
 
   return (
-    <>
-      <h1>General Information</h1>
-        <label>
-          First Name:{' '}
-        </label>
-        <input
-          size='30'
-          type="text"
-          className="first-name"
-          value={firstName}
-          onChange={(event) => setFirstName(event.target.value)}
-        />
-        <label>
-          Last Name:{' '}
-        </label>
-        <input
-          size='30'
-          type="text"
-          className="last-name"
-          value={lastName}
-          onChange={(event) => setLastName(event.target.value)}
-        />
-        <label>
-          Email:{' '}
-        </label>
-        <input
-          size='30'
-          type="text"
-          className="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-        <label>
-          Telephone:{' '}
-        </label>
-        <input
-          type="number"
-          className="telephone"
-          value={telephone}
-          onChange={(event) => setTelephone(event.target.value)}
-        />
-    </>
+    <div className="gen">
+      <fieldset>
+        <legend>General Information</legend>
+        <div className="general-inputFields">
+          <div className="field">
+            <label htmlFor="first-name">First Name: </label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              defaultValue={data.name}
+              onChange={handleOnChange}
+              required
+            />
+          </div>
+          <div className="field">
+            <label htmlFor="last-name">Last Name: </label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              defaultValue={data.name}
+              onChange={handleOnChange}
+              required
+            />
+          </div>
+          <div className="field">
+            <label htmlFor="email">Email: </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              defaultValue={data.email}
+              onChange={handleOnChange}
+            required/>
+          </div>
+          <div className="field">
+            <label htmlFor="number">Number: </label>
+            <input
+              type="tel"
+              id="number"
+              name="number"
+              defaultValue={data.number}
+              onChange={handleOnChange}
+              required
+            />
+          </div>
+        </div>
+      </fieldset>
+    </div>
   );
 }
