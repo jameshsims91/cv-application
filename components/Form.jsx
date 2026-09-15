@@ -37,9 +37,9 @@ export default function Form({ onSubmit, information }) {
         id: crypto.randomUUID(),
         company: '',
         position: '',
-        responsibilities: '',
         startDate: '',
         endDate: '',
+        responsibilities: '',
       },
     ]);
   }

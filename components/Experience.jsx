@@ -60,17 +60,6 @@ function ListItem({ dataLength, data, onChange, onDelete }) {
           />
         </div>
         <div className="field">
-          <label htmlFor={"responsibilities-" + data.id}> Responsibilities:{' '}</label>
-          <input
-            type="text"
-            name="responsibilities"
-            id={"responsibilities-" + data.id}
-            defaultValue={data.responsibilities}
-            onChange={(e) => handleOnChange(e, data.id)}
-            required
-          />
-        </div>
-        <div className="field">
           <label htmlFor={"startDate-" + data.id}> Start Date: </label>
           <input
             type="date"
@@ -92,6 +81,17 @@ function ListItem({ dataLength, data, onChange, onDelete }) {
             name="endDate"
             id={"endDate-" + data.id}
             defaultValue={data.endDate}
+            onChange={(e) => handleOnChange(e, data.id)}
+            required
+          />
+        </div>
+        <div className="field">
+          <label htmlFor={"responsibilities-" + data.id}> Responsibilities:{' '}</label>
+          <input
+            type="text"
+            name="responsibilities"
+            id={"responsibilities-" + data.id}
+            defaultValue={data.responsibilities}
             onChange={(e) => handleOnChange(e, data.id)}
             required
           />

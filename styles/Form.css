@@ -1,0 +1,199 @@
+/* ==========================================================================
+   1. MAIN FORM PANEL (Matches .display perfectly)
+   ========================================================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid var(--border);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  color: white; 
+}
+
+
+/* ==========================================================================
+   2. CATEGORY BLOCK CONTAINERS (Matches widths & margins)
+   ========================================================================== */
+.general-form-block {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 35px;
+}
+
+.education-form-block {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+
+.experience-form-block {
+  width: 100%;
+  max-width: 450px;
+}
+
+
+/* ==========================================================================
+   3. INTERNAL ROW INPUT LINES (.info Grid Layouts)
+   ========================================================================== */
+.general-form-block .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.education-form-block .info,
+.experience-form-block .info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+
+/* ==========================================================================
+   4. LABEL WIDTH ALIGNMENTS (Matches your 130px and 145px layout)
+   ========================================================================== */
+.general-form-block .label {
+  width: 130px;
+  font-weight: bolder;
+  flex-shrink: 0;
+  color: white;
+}
+
+.education-form-block .label,
+.experience-form-block .label {
+  width: 145px;
+  font-weight: bolder;
+  color: white;
+  flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   5. NATIVE INPUT & TEXTAREA UI STYLE ACCENTS
+   ========================================================================== */
+form input,
+form textarea {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: white;
+}
+
+
+/* ==========================================================================
+   6. DYNAMIC TEXTAREA / RESPONSIBILITIES BLOCK SPECIFICS
+   ========================================================================== */
+.experience-form-block .info:has(textarea) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: white;
+}
+
+.experience-form-block .info:has(textarea) .label {
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit; 
+}
+
+
+/* ==========================================================================
+   7. INTERACTIVE ACTION BUTTON BASES (Add, Remove, Submit)
+   ========================================================================== */
+.form-card {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+form type > button,
+form button[type="button"] {
+  background: transparent;
+  color: white;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+.form-card button {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.submitButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.submitButton button {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submitButton button:hover {
+  background: var(--accent-bg);
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}
+

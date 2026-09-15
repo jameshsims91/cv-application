@@ -1,0 +1,120 @@
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid var(--border);
+  border-radius: 4px;
+}
+
+.general-block {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 35px;
+}
+
+.section-block h2,
+.general-block h2,
+.experience-block h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+}
+
+.general-block .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.general-block .label {
+  width: 130px;
+  font-weight: bolder;
+  flex-shrink: 0;
+  color: white;
+}
+
+.section-block {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+
+.experience-block {
+  width: 100%;
+  max-width: 450px;
+}
+
+.section-block .info,
+.experience-block .info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.section-block .label,
+.experience-block .label {
+  width: 145px;
+  font-weight: bolder;
+  color: white;
+  flex-shrink: 0;
+}
+
+.experience-block .responsibility-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: white;
+}
+
+.experience-block .responsibility-row .label {
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.card-content {
+  /* margin-bottom: 30px; */
+  padding-bottom: 15px;
+}
+
+.editButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.editButton button {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editButton button:hover {
+  background: var(--accent-bg);
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}

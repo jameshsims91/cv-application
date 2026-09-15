@@ -14,23 +14,23 @@ export default function General({ data, onChange }) {
         <legend>General Information</legend>
         <div className="general-inputFields">
           <div className="field">
-            <label htmlFor="first-name">First Name: </label>
+            <label htmlFor="first">First Name: </label>
             <input
               type="text"
-              id="first-name"
-              name="first-name"
-              defaultValue={data.name}
+              id="first"
+              name="first"
+              defaultValue={data.first}
               onChange={handleOnChange}
               required
             />
           </div>
           <div className="field">
-            <label htmlFor="last-name">Last Name: </label>
+            <label htmlFor="last">Last Name: </label>
             <input
               type="text"
-              id="last-name"
-              name="last-name"
-              defaultValue={data.name}
+              id="last"
+              name="last"
+              defaultValue={data.last}
               onChange={handleOnChange}
               required
             />
@@ -43,7 +43,8 @@ export default function General({ data, onChange }) {
               name="email"
               defaultValue={data.email}
               onChange={handleOnChange}
-            required/>
+              required
+            />
           </div>
           <div className="field">
             <label htmlFor="number">Number: </label>

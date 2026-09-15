@@ -64,7 +64,9 @@ function ListItem({ dataLength, data, onChange, onDelete }) {
           <label htmlFor={"date-" + data.id}>Date Graduated: </label>
           <input
             type="date"
-            name="date-of-study"
+            min='1900'
+            max='2100'
+            name="date"
             id={"date-" + data.id}
             defaultValue={data.date}
             onChange={(e) => handleOnChange(e, data.id)}
